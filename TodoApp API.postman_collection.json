@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "89e6533c-f1cd-478c-b6c2-57b7ea5d9226",
+		"name": "TodoApp API",
+		"description": "Coleção para testar a API ToDo criada em .NET Core",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15466773"
+	},
+	"item": [
+		{
+			"name": "Listar todas tarefas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{todo_app_url}}/api/tasks",
+					"host": [
+						"{{todo_app_url}}"
+					],
+					"path": [
+						"api",
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "Tarefa teste atualizada",
+							"disabled": true
+						},
+						{
+							"key": "due_date_min",
+							"value": "2025-06-25 00:00:00",
+							"disabled": true
+						},
+						{
+							"key": "due_date_max",
+							"value": "2025-06-25 23:59:59",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "page_size",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar tarefa por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{todo_app_url}}/api/tasks/:task_id",
+					"host": [
+						"{{todo_app_url}}"
+					],
+					"path": [
+						"api",
+						"tasks",
+						":task_id"
+					],
+					"variable": [
+						{
+							"key": "task_id",
+							"value": "32998C5D-8099-432A-A27D-E6D9BEA04902"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar nova tarefa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Tarefa teste 3\",\n  \"description\": \"Descrição da tarefa teste 3\",\n  \"status\": 0,\n  \"dueDate\": \"2025-07-01T00:00:00\"\n}"
+				},
+				"url": {
+					"raw": "{{todo_app_url}}/api/tasks",
+					"host": [
+						"{{todo_app_url}}"
+					],
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar tarefa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"9E1F58B1-81B0-41CF-B2D8-B4B66A5FC757\",\n  \"title\": \"Tarefa teste 2 atualizada\",\n  \"description\": \"Descrição teste 2 atualizada\",\n  \"status\": 2,\n  \"dueDate\": \"2025-07-15T00:00:00\"\n}"
+				},
+				"url": {
+					"raw": "{{todo_app_url}}/api/tasks/:task_id",
+					"host": [
+						"{{todo_app_url}}"
+					],
+					"path": [
+						"api",
+						"tasks",
+						":task_id"
+					],
+					"variable": [
+						{
+							"key": "task_id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remover tarefa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{todo_app_url}}/api/tasks/:task_id",
+					"host": [
+						"{{todo_app_url}}"
+					],
+					"path": [
+						"api",
+						"tasks",
+						":task_id"
+					],
+					"variable": [
+						{
+							"key": "task_id",
+							"value": "32998C5D-8099-432A-A27D-E6D9BEA04902"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{todo_app_url}}/api/health",
+					"host": [
+						"{{todo_app_url}}"
+					],
+					"path": [
+						"api",
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
