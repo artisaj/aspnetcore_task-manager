@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  todoapp-api:
+    build:
+      context: .
+      dockerfile: TodoApp.API/Dockerfile
+    ports:
+      - "5089:8080"
+    container_name: todoapp-api
