@@ -5,6 +5,8 @@ services:
     build:
       context: .
       dockerfile: TodoApp.API/Dockerfile
+    volumes:
+      - ./TodoApp.API:/app/TodoApp.API
     ports:
       - "5089:8080"
     container_name: todoapp-api
