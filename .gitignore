@@ -273,4 +273,6 @@ __pycache__/
 
 # End of https://www.toptal.com/developers/gitignore/api/aspnetcore
 
-*.db
+TodoApp.API/todoapp.db
+TodoApp.API/todoapp.db-shm
+TodoApp.API/todoapp.db-wal
