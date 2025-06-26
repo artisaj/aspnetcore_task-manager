@@ -46,7 +46,7 @@ dotnet run --project TodoApp.API
 docker-compose up --build
 ```
 
-A API estará disponível em http://127.0.0.1:5089.
+A API estará disponível em http://localhost:5089.
 
 ## ✅ Testes
 Execute os testes com:
