@@ -17,7 +17,7 @@ A aplicação já vem configurada com o Swagger para facilitar a exploração e 
 Após rodar o projeto (local ou via Docker), abra no navegador:
 
 ```bash
-http://localhost:5000/swagger
+http://localhost:5089/swagger
 ```
 Isso irá exibir uma interface interativa com todos os endpoints da API, seus parâmetros, tipos de resposta e permite até executar chamadas diretamente da interface.
 
@@ -28,7 +28,7 @@ docker-compose up --build
 
 Depois, acesse:
 ```bash
-http://localhost:5000/swagger
+http://localhost:5089/swagger
 ```
 
 ## 🚀 Como rodar
